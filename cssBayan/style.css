@@ -21,20 +21,6 @@ h1 {
    margin: 0 1.25rem 1.25rem 1.25rem;
 }
 
-@media (min-width: 51.25rem) {
-   h1 {
-      font-size: 2rem;
-      margin: 0 1.25rem 1.25rem 1.875rem;
-   }
-}
-
-@media (min-width: 51.25rem) {
-   h1 {
-      font-size: 2rem;
-      margin: 0 1.25rem 1.25rem 1.875rem;
-   }
-}
-
 
 .accordion__item {
    width: 100%;
@@ -93,7 +79,7 @@ input[type="radio"]{
 
 
 /*Добавим курсор и ховер на десктопной версии*/
-@media (min-width: 120rem) {
+@media (min-width: 73.75rem) {
    .accordion__input:checked~.accordion__img {
       height: 30.625rem;
     }
