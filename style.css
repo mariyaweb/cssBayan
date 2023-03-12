@@ -36,32 +36,38 @@ h1 {
    background-position: 99% 50%;
    transition: 0.5s ease;
 }
+
 input[type="radio"]{
    display: none;
 }
+
 .accordion__input:checked + .accordion__title {
    color: blue;
    transition: 0.5s ease;
 }
+
 .accordion__input:checked + .accordion {
    color: blue;
 }
+
+
 /* ~ - родственный селектор.
 Св-ва применяются к картинке, которая находится с input или после него на одном уровне*/
 .accordion__input:checked~.accordion__img {
    height: auto;
-   padding: 0.3125rem;
+   padding: 0;
    opacity: 1;
-   transition: all 1.5s ease-in;
+   transition: all 0.5s ease-in;
  }
+
 .accordion__img {
    display: flex;
    flex-direction: column;
-   align-items: center;   
+   align-items: center;
    height: 0;
    overflow: hidden;
    opacity: 0;
-   transition: all 0.5s ease-in;
+   transition: all 2s ease-in;
 }
 
 .accordion__img img {
@@ -73,29 +79,41 @@ input[type="radio"]{
 
 /*Добавим курсор и ховер на десктопной версии*/
 @media (min-width: 90rem) {
+   .accordion__input:checked~.accordion__img {
+      height: 30.625rem;
+    }
+
    .accordion:hover {
       cursor: pointer;
    }
+
    .accordion__item:hover {
       cursor: pointer;
    }
 
    .accordion__item:hover > .accordion__img {
-      height: 37.5rem;
+      height: 30.625rem;
       padding: 0.625rem;
       opacity: 1;
-      transition: all 0.5s ease;
+      transition: all 2s ease-out;
    }
+
    .accordion:hover .accordion__item:hover .accordion__title {
       background-image: url(assets/cross.svg);
       transition: 0.5s ease;
     }
+
    .accordion:hover .accordion__title {
       color: blue;
       background-image: url(assets/plus.svg);
       transition: 0.5s ease;
    }
+
    .accordion:hover .accordion__input:checked~.accordion__title {
       background-image: url(assets/cross.svg);
     }
+
 }
+
+
+
